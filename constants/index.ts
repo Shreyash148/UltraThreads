@@ -1,0 +1,64 @@
+export const leftBarOptions=[
+    {
+        label:"Home",
+        routes:"/",
+        imgDestination:"/assets/home.svg",
+        activeImgDest:"/assets/home-active.svg"
+    },
+    {
+        label:"Search",
+        routes:"/search",
+        imgDestination:"/assets/search.svg",
+        activeImgDest:"/assets/search-active.svg"
+    },
+    {
+        label:"Create Threads",
+        routes:"/create-threads",
+        imgDestination:"/assets/create-threads.svg",
+        activeImgDest:"/assets/create-threads-active.svg"
+    },
+    {
+        label:"Activity",
+        routes:"/activity",
+        imgDestination:"/assets/activity.svg",
+        activeImgDest:"/assets/activity-active.svg"
+    },
+    {
+        label:"Profile",
+        routes:"/profile",
+        imgDestination:"/assets/profile.svg",
+        activeImgDest:"/assets/profile-active.svg"
+    },
+]
+export const bottomBarOptions=[
+    {
+        label:"Home",
+        routes:"/",
+        imgDestination:"/assets/home.svg",
+        activeImgDest:"/assets/home-active.svg"
+    },
+    {
+        label:"Search",
+        routes:"/search",
+        imgDestination:"/assets/search.svg",
+        activeImgDest:"/assets/search-active.svg"
+    },
+    {
+      label:"Create",
+      routes:"/create-threads",
+      imgDestination:"/assets/create-threads.svg",
+      activeImgDest:"/assets/create-threads-active.svg"
+  },
+    {
+        label:"Activity",
+        routes:"/activity",
+        imgDestination:"/assets/activity.svg",
+        activeImgDest:"/assets/activity-active.svg"
+    },
+    {
+        label:"Profile",
+        routes:"/profile",
+        imgDestination:"/assets/profile.svg",
+        activeImgDest:"/assets/profile-active.svg"
+    },
+]

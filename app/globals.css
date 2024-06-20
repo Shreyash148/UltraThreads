@@ -2,32 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  /* main */
+  .main-container {
+    @apply flex min-h-screen flex-1 flex-col items-center bg-light-1 px-6 pb-10 md:pt-10 pt-28 max-md:pb-32 sm:px-10;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* Head Text */
+  .head-text {
+    @apply text-heading2-bold text-light-1;
+  }
+
+  .userThreads{
+    @apply p-4 pt-6 w-full text-center border-b cursor-pointer;
+  }
+  
+  .topbar {
+    @apply fixed top-0 z-30 flex w-full items-center justify-between bg-primary-500 px-6 py-3;
+  }
+
+  .bottombar {
+    @apply fixed bottom-0 z-10 w-full rounded-t-3xl bg-primary-500 backdrop-blur-lg xs:px-7 md:hidden;
+  }
+  .leftsidebar {
+    @apply sticky left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto bg-primary-500 text-light-1 pb-5 md:pt-0 pt-20 px-2 max-md:hidden;
+  }
+  .rightbar {
+    @apply sticky right-0 top-0 z-20 flex h-screen w-fit flex-col justify-between text-light-1 gap-12 overflow-auto border-l  bg-violet-800 px-10 pb-6 pt-16 max-xl:hidden;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .css-invert {
+    @apply invert-[50%] brightness-200;
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
+}
+
+.no-focus {
+  @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+}
+.onboard{
+  @apply mx-auto min-h-screen flex flex-col justify-start items-center md:px-10 md:py-10 py-5 px-3 bg-glassmorphism text-light-1;
+}
+.signInUp{
+  @apply flex justify-center items-center w-full h-screen bg-glassmorphism;
 }
